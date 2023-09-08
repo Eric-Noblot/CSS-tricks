@@ -1,0 +1,227 @@
+.flex {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 100px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+p {
+    font-size: 20px;
+    color: blue;
+    font-family: sans-serif;
+}
+
+
+/* --------------------------------- */
+/* Clip-path */
+
+.container__clipPath1{
+    width: 300px;
+    height: 300px;
+    background-color: rebeccapurple;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); /* récupérable sur site clip-path maker */
+    transition: all 2s ease;
+}
+.container__clipPath1:hover{
+    clip-path: polygon(20% 20%, 80% 0%, 60% 100%, 0% 100%);
+
+}
+
+.container__clipPath2{
+    width: 300px;
+    height: 300px;
+    background-color: rebeccapurple;
+    clip-path: circle(50% at 40px 10%);
+    transition: all 2s ease;
+}
+.container__clipPath2:hover{
+    clip-path: circle(100%);
+
+}
+/* --------------------------------- */
+
+/* --------------------------------- */
+/* Perspective */
+
+.container__perspective1{
+    width: 300px;
+    height: 300px;
+    border: 3px solid purple;
+}
+.box__perspective1{
+    width: 300px;
+    height: 300px;
+    background-color: aquamarine;
+    transform: rotate(45deg);
+    transition: transform 2s ease;
+}
+.box__perspective1:hover{
+    transform: rotate(90deg)
+}
+
+.container__perspective2{
+    width: 300px;
+    height: 300px;
+    border: 3px solid purple;
+    perspective: 300px; /* avec perspective dans le parent + rotatex dans l'enfant, on peut voir l'objet en 3D */
+    transition: all 2s ease;
+}
+.container__perspective2:hover{
+    perspective: 100px; 
+
+}
+
+.box__perspective2{
+    width: 300px;
+    height: 300px;
+    background-color: aquamarine;
+    transform: rotatex(45deg);
+    transition: transform 2s ease;
+}
+
+
+.container__perspective3{
+    width: 300px;
+    height: 300px;
+    border: 3px solid purple;
+    perspective: 300px; /* avec perspective dans le parent + rotatex dans l'enfant, on peut voir l'objet en 3D */
+    transition: all 2s ease;
+}
+
+.box__perspective3{
+    width: 300px;
+    height: 300px;
+    background-color: aquamarine;
+    transform: rotatey(300deg);
+}
+.box__perspective3:hover{
+    transform: rotatey(0deg);
+    transition: transform 2s ease;
+
+}
+/* --------------------------------- */
+
+/* --------------------------------- */
+/* Aspect ratio */
+
+/* //apect radio nous permet de donner un ratio à l'ecran de notre video, si on reduit la fenetre en largeur, 
+en principe notre div garde la meme hauteur mais s'adapte à la taille de l'ecran en largeur. grace a aspect ratio 
+notre video gardera un format 16/9 meme en reduisant notre fenetre et adaptera la hauteur en meme temps. 
+Du coup on est plus obligé de préciser la hateur dans le CSS */
+
+.video__player{
+    width: 100%;
+    /* height: 500px; */
+    background-color: black;
+    aspect-ratio: 16/9;
+}
+/* --------------------------------- */
+
+/* --------------------------------- */
+/* Filters */
+
+    /* blur */
+
+.container__img {
+    width: 300px;
+    height: 500px;
+}
+
+#vegeta1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter:blur(5px);
+    transition: all 1s ease;
+}
+#vegeta1:hover {
+    filter:none;
+
+}
+
+    /* brightness */
+
+    #vegeta2 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter:brightness(200%);
+        transition: all 1s ease;
+    }
+    #vegeta2:hover {
+        filter:none;
+    }
+
+    /* contrast */
+
+    #vegeta3 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter:contrast(400%);
+        transition: all 1s ease;
+    }
+    #vegeta3:hover {
+        filter:none;
+    }
+
+    /* grayscale */
+
+    #vegeta4 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter:grayscale(100%);
+        transition: all 1s ease;
+    }
+    #vegeta4:hover {
+        filter:none;
+    }
+
+    /* saturate */
+
+    #vegeta5 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter:saturate(400%);
+        transition: all 1s ease;
+    }
+    #vegeta5:hover {
+        filter:none;
+    }
+
+    /* sepia */
+
+    #vegeta6 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter:sepia(100%);
+        transition: all 1s ease;
+    }
+    #vegeta6:hover {
+        filter:none;
+    }
+
+/* --------------------------------- */
+
+/* --------------------------------- */
+/* Input */
+
+input {
+width: 300px;
+height: 50px;
+font-size: 20px;
+border: 1px solid red;
+padding: 10px;
+caret-color: red; /* change la couleur de la barre qui clignote dans la recherche */
+color: red;
+}
+input:focus {
+    outline: 1px solid red;
+}
+input::placeholder {
+    color: red;
+}

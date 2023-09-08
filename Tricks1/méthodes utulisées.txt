@@ -1,0 +1,5 @@
+clip-path (modification de la forme dun objet)
+perspective (rotation 3d d'un objet)
+aspect-ratio (garder une video en 16/9)
+filters (saturate, grayscale, blur etc..)
+modifier input(couleur place holder etc...)
